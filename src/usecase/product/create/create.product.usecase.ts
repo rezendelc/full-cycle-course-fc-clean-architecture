@@ -17,7 +17,7 @@ export default class CreateProductUseCase {
     input: InputCreateProductDto
   ): Promise<OutputCreateProductDto> {
     const product = new Product(
-      uuid(),
+      input.id,
       input.name,
       input.price
     );

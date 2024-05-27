@@ -1,6 +1,8 @@
 import CreateProductUseCase from "./create.product.usecase";
+import { v4 as uuid } from "uuid"
 
 let input: {
+  id: string,
   name: string,
   price: number
 };
@@ -18,6 +20,7 @@ describe("Unit test create product use case", () => {
 
   beforeEach(() => {
     input = {
+      id: uuid(),
       name: "Product 1",
       price: 1
     };
